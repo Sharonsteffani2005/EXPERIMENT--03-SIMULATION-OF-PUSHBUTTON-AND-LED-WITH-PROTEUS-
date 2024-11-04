@@ -1,4 +1,4 @@
-# EXPERIMENT--03-SIMULATION-OF-PUSHBUTTON-AND-LED INTERFACE WITH ARM CONTROLLER AND PROTEUS 
+# EXPERIMENT--02-SIMULATION-OF-PUSHBUTTON-AND-LED INTERFACE WITH ARM CONTROLLER AND PROTEUS 
 ## Aim: To Interface a Digital output (LED) and Digital input (Pushbutton) to ARM development board , and simulate it in Proteus 
 ## Components required: STM32 CUBE IDE, Proteus 8 simulator .
 ## Theory 
@@ -98,9 +98,8 @@ void push_button()
 	if(button_status==0)
 	{
 		HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,GPIO_PIN_SET);
-		//HAL_Delay(500);
 		HAL_GPIO_WritePin(GPIOA,GPIO_PIN_5,GPIO_PIN_RESET);
-		//HAL_Delay(500);
+
 	}
 	else
 	{
@@ -166,13 +165,11 @@ void Error_Handler(void)
   }
 }
 
-#ifdef  USE_FULL_ASSERT
 
 void assert_failed(uint8_t *file, uint32_t line)
 {
 
 }
-#endif
 ```
 ## Output screen shots of proteus  :
 ![Screenshot 2024-09-13 092249](https://github.com/user-attachments/assets/5c8c4de0-c257-4ead-9064-fb0eb33d870c)
